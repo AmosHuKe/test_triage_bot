@@ -48,7 +48,7 @@ void main(List<String> arguments) async {
 
   // Accept either an issue number or a url (i.e.,
   // https://github.com/dart-lang/sdk/issues/55816).
-  const sdkToken = 'dart-lang/sdk/issues/';
+  const sdkToken = 'AmosHuKe/test_triage_bot/issues/';
   if (issue.contains(sdkToken)) {
     issue = issue.substring(issue.indexOf(sdkToken) + sdkToken.length);
   }
@@ -79,6 +79,6 @@ void main(List<String> arguments) async {
 }
 
 const String usage = '''
-A tool to triage issues from https://github.com/dart-lang/sdk.
+A tool to triage issues from https://github.com/AmosHuKe/test_triage_bot.
 
 usage: dart bin/triage.dart [options] <issue>''';
