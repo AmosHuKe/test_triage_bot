@@ -21,7 +21,6 @@ jobs:
       - uses: dart-lang/setup-dart@v1
 
       - run: dart pub get
-        working-directory: /
 
       # Delay 1 minutes to allow a grace period between opening or transferring
       # an issue and assigning an area- label.
@@ -29,7 +28,6 @@ jobs:
         run: sleep 60
 
       - name: triage issue
-        working-directory: /
         env:
           ISSUE_URL: ${{ github.event.issue.html_url }}
           GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
